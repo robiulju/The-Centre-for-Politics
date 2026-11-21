@@ -44,6 +44,14 @@ function initMobileMenu() {
   drawerLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
   });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMenu();
+      document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m));
+    }
+  });
 }
 
 /* -------------------------------------------------------------
