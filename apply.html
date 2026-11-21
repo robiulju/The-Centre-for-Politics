@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Enrolment & Registration Portal | The Centre for Politics (TCP)</title>
+  <meta name="description" content="Register and apply for The Centre for Politics training programmes. Online registration, course fee payment, and batch selection.">
+  <link rel="icon" type="image/jpeg" href="assets/images/tcp-logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <aside class="top-bar" aria-label="Top Bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-badge"><i class="fas fa-lock"></i> Secure Application Gateway</span>
+        <span class="top-bar-item"><i class="fas fa-user-check aurora-text"></i> Official Admissions Portal 2026</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+919810543092" class="top-bar-item"><i class="fas fa-phone aurora-text"></i> +91 9810543092</a>
+        <a href="https://wa.me/919810543092" target="_blank" class="top-bar-item" style="color:#25d366;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="TCP Home">
+        <img src="assets/images/tcp-logo.jpg" alt="TCP Logo" width="54" height="54">
+        <div class="brand-text">
+          <span class="brand-name">THE CENTRE FOR POLITICS</span>
+          <span class="brand-tagline">We Train Leaders</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="courses.html" class="nav-link">Our Courses</a>
+        <a href="careers.html" class="nav-link">Political Careers</a>
+        <a href="vision.html" class="nav-link">Our Vision</a>
+        <a href="founder.html" class="nav-link">Founder</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-cta-group">
+        <a href="courses.html" class="btn btn-outline btn-sm">View Courses</a>
+        <button class="mobile-toggle" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <header class="section-py-sm bg-dark-1" style="border-bottom: 1px solid var(--ice-border);">
+    <div class="container">
+      <span class="section-tag"><i class="fas fa-graduation-cap"></i> Candidate Registration</span>
+      <h1 style="font-size: clamp(2.4rem, 4vw, 3.4rem); margin-bottom: 14px;">Student <span class="gradient-text">Enrolment Portal</span></h1>
+      <p style="color: var(--ice-muted); font-size: 1.15rem; max-width: 800px;">
+        Complete your registration for our upcoming political leadership, election strategy, or mentorship cohorts.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-py">
+      <div class="container" style="max-width: 860px;">
+        <div class="form-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--ice-border); padding-bottom: 20px; margin-bottom: 28px;">
+            <div>
+              <h2 style="font-size: 1.6rem; color: #fff;">Application & Admission Form</h2>
+              <p style="color: var(--ice-muted); font-size: 0.9rem;">Fill in your verified details for enrollment documentation.</p>
+            </div>
+            <div style="text-align: right;">
+              <span class="top-badge"><i class="fas fa-shield-alt"></i> Verified Portal</span>
+            </div>
+          </div>
+
+          <form id="applicationPortalForm">
+            <!-- Course Selection -->
+            <div class="form-group">
+              <label class="form-label">1. Choose Course / Programme *</label>
+              <select id="courseSelectDropdown" class="form-control" required style="font-weight: 600; color: var(--aurora-green);">
+                <option value="500" data-name="Course 1: Introduction to Politics & Leadership">Course 1: Introduction to Politics & Leadership (₹500 - Online)</option>
+                <option value="15000" data-name="Course 2: Political Leadership & Election Management">Course 2: Political Leadership & Election Management (₹15,000 - Residential Bootcamp)</option>
+                <option value="100000" data-name="Course 3: Personal Political Mentorship">Course 3: Personal Political Mentorship (₹1,00,000 - 1-on-1 Guidance)</option>
+                <option value="500000" data-name="Course 4: Advanced Geopolitics & International Relations">Course 4: Advanced Geopolitics & International Relations (₹5,00,000 - Advanced Specialised)</option>
+              </select>
+            </div>
+
+            <!-- Cohort / Batch -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Preferred Batch Month *</label>
+                <select class="form-control" required>
+                  <option value="Upcoming Immediate Batch">Upcoming Immediate Cohort (Fast Track)</option>
+                  <option value="Weekend Batch">Weekend Intensive Schedule</option>
+                  <option value="Next Month Cohort">Next Month Cohort</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Language Preference *</label>
+                <select class="form-control" required>
+                  <option value="Bilingual">Bilingual (Hindi + English)</option>
+                  <option value="English">English</option>
+                  <option value="Hindi">Hindi</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Candidate Details -->
+            <h4 style="font-size: 1.15rem; color: var(--ice-white-pure); margin: 28px 0 16px 0; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 20px;">
+              2. Candidate Personal Information
+            </h4>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-control" placeholder="Candidate's full name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Gender</label>
+                <select class="form-control">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                  <option value="Prefer not to say">Prefer not to say</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Contact / WhatsApp Number *</label>
+                <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-control" placeholder="name@email.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">State / Union Territory *</label>
+                <input type="text" class="form-control" placeholder="e.g. Haryana / Delhi / UP" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Home Parliamentary / Assembly Constituency</label>
+                <input type="text" class="form-control" placeholder="Constituency name">
+              </div>
+            </div>
+
+            <!-- Background -->
+            <div class="form-group">
+              <label class="form-label">Current Occupation / Affiliation</label>
+              <select class="form-control">
+                <option value="Student">Student (College / University)</option>
+                <option value="Political Aspirant / Activist">Political Aspirant / Activist</option>
+                <option value="Existing Political Worker">Existing Political Worker / Office-bearer</option>
+                <option value="Elected Public Representative">Elected Public Representative (Panchayat/ULB/Assembly)</option>
+                <option value="Working Professional">Corporate / Working Professional</option>
+                <option value="Journalist / Media / Research">Journalist / Media / Researcher</option>
+                <option value="Entrepreneur">Entrepreneur / Business Owner</option>
+              </select>
+            </div>
+
+            <!-- Live Fee Display Box -->
+            <div style="margin: 32px 0 24px 0; padding: 22px; background: var(--bg-dark-1); border: 1px solid var(--ice-border); border-radius: var(--radius-md);">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <span style="font-size: 0.85rem; color: var(--ice-muted); text-transform: uppercase;">Total Course Fee</span>
+                  <div id="selectedCourseNameDisplay" style="font-size: 1.05rem; font-weight: 700; color: #fff;">
+                    Course 1: Introduction to Politics & Leadership
+                  </div>
+                </div>
+                <div style="text-align: right;">
+                  <span style="font-size: 0.8rem; color: var(--ice-muted);">Net Payable</span>
+                  <div id="selectedCoursePriceDisplay" style="font-size: 2rem; font-weight: 900; color: var(--aurora-green);">
+                    ₹500
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group" style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: var(--ice-muted);">
+              <input type="checkbox" required style="margin-top: 4px;">
+              <span>I confirm that the information provided is correct, and I agree to abide by the academic code of conduct of The Centre for Politics.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              <i class="fas fa-lock"></i> Submit Application & Proceed to Payment
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Centre for Politics (TCP). Tagline: <em>We Train Leaders</em>.</div>
+        <div class="footer-bottom-links">
+          <a href="courses.html">All Courses</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Handle Course Selector URL query params and price update
+    const urlParams = new URLSearchParams(window.location.search);
+    const courseParam = urlParams.get('course');
+    const selectEl = document.getElementById('courseSelectDropdown');
+    const nameDisplay = document.getElementById('selectedCourseNameDisplay');
+    const priceDisplay = document.getElementById('selectedCoursePriceDisplay');
+
+    if (courseParam && selectEl) {
+      if (courseParam === '1') selectEl.value = '500';
+      else if (courseParam === '2') selectEl.value = '15000';
+      else if (courseParam === '3') selectEl.value = '100000';
+      else if (courseParam === '4') selectEl.value = '500000';
+    }
+
+    function updateFee() {
+      const selectedOpt = selectEl.options[selectEl.selectedIndex];
+      const price = selectEl.value;
+      const courseName = selectedOpt.getAttribute('data-name');
+      if (nameDisplay) nameDisplay.textContent = courseName;
+      if (priceDisplay) priceDisplay.textContent = '₹' + Number(price).toLocaleString('en-IN');
+    }
+
+    if (selectEl) {
+      selectEl.addEventListener('change', updateFee);
+      updateFee();
+    }
+
+    // Connect application submit to simulated payment gateway modal
+    const appForm = document.getElementById('applicationPortalForm');
+    if (appForm) {
+      appForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const selectedOpt = selectEl.options[selectEl.selectedIndex];
+        const title = selectedOpt.getAttribute('data-name');
+        const amount = selectEl.value;
+
+        const payModal = document.getElementById('paymentModal');
+        const payCourseTitle = document.getElementById('payModalCourseTitle');
+        const payCourseAmount = document.getElementById('payModalCourseAmount');
+        const payAmountInput = document.getElementById('payAmountInput');
+
+        if (payCourseTitle) payCourseTitle.textContent = title;
+        if (payCourseAmount) payCourseAmount.textContent = '₹' + Number(amount).toLocaleString('en-IN');
+        if (payAmountInput) payAmountInput.value = amount;
+
+        if (payModal) {
+          payModal.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    }
+  </script>
+
+  <!-- Dynamic Payment Modal inside apply.html -->
+  <div class="modal-overlay" id="paymentModal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3><i class="fas fa-shield-alt aurora-text"></i> Secure Registration Fee</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="background: var(--bg-dark-1); border: 1px solid var(--ice-border); border-radius: var(--radius-sm); padding: 18px; margin-bottom: 20px;">
+          <div style="font-size: 0.85rem; color: var(--ice-muted); text-transform: uppercase;">Selected Programme:</div>
+          <div id="payModalCourseTitle" style="font-size: 1.15rem; font-weight: 700; color: #fff; margin: 4px 0 10px 0;">
+            Course Registration
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 10px;">
+            <span style="color: var(--ice-muted); font-size: 0.9rem;">Fee Payable:</span>
+            <span id="payModalCourseAmount" style="font-size: 1.6rem; font-weight: 800; color: var(--aurora-green);">₹500</span>
+          </div>
+        </div>
+
+        <form id="paymentSimulationForm">
+          <input type="hidden" id="payAmountInput" value="500">
+          <div class="form-group">
+            <label class="form-label">Payment Channel</label>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px;">
+              <label style="border: 1px solid var(--aurora-green); background: var(--bg-dark-1); border-radius: 8px; padding: 10px; text-align: center; font-size: 0.8rem; cursor: pointer; color: #fff;">
+                <input type="radio" name="paymethod2" checked style="margin-bottom: 4px;"><br>UPI / QR
+              </label>
+              <label style="border: 1px solid var(--ice-border); background: var(--bg-dark-1); border-radius: 8px; padding: 10px; text-align: center; font-size: 0.8rem; cursor: pointer; color: var(--ice-muted);">
+                <input type="radio" name="paymethod2" style="margin-bottom: 4px;"><br>Credit/Debit
+              </label>
+              <label style="border: 1px solid var(--ice-border); background: var(--bg-dark-1); border-radius: 8px; padding: 10px; text-align: center; font-size: 0.8rem; cursor: pointer; color: var(--ice-muted);">
+                <input type="radio" name="paymethod2" style="margin-bottom: 4px;"><br>NetBanking
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-check-circle"></i> Confirm Payment & Enrol
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

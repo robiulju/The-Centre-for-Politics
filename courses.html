@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Courses | The Centre for Politics (TCP) | We Train Leaders</title>
+  <meta name="description" content="Explore our four flagship courses at The Centre for Politics: Introduction to Politics, Political Leadership & Election Management, Personal Political Mentorship, and Advanced Geopolitics.">
+  <link rel="icon" type="image/jpeg" href="assets/images/tcp-logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar" aria-label="Announcement & Contact Bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="top-badge"><i class="fas fa-graduation-cap"></i> Flagship Academic Directory</span>
+        <span class="top-bar-item"><i class="fas fa-location-dot aurora-text"></i> DLF Phase 5, Sector 54, Gurugram</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+919810543092" class="top-bar-item"><i class="fas fa-phone aurora-text"></i> +91 9810543092</a>
+        <a href="https://wa.me/919810543092" target="_blank" class="top-bar-item" style="color:#25d366;"><i class="fab fa-whatsapp"></i> WhatsApp Enquiry</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="TCP Home">
+        <img src="assets/images/tcp-logo.jpg" alt="TCP Logo" width="54" height="54">
+        <div class="brand-text">
+          <span class="brand-name">THE CENTRE FOR POLITICS</span>
+          <span class="brand-tagline">We Train Leaders</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="courses.html" class="nav-link active">Our Courses</a>
+        <a href="careers.html" class="nav-link">Political Careers</a>
+        <a href="vision.html" class="nav-link">Our Vision</a>
+        <a href="founder.html" class="nav-link">Founder</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-cta-group">
+        <a href="apply.html" class="btn btn-primary btn-sm">
+          <span>Apply Now</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <button class="mobile-toggle" aria-label="Open Navigation Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="menu-overlay"></div>
+  <aside class="mobile-menu-drawer" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <img src="assets/images/tcp-logo.jpg" alt="TCP Logo" width="44" height="44">
+        <div class="brand-text">
+          <span class="brand-name" style="font-size: 1rem;">THE CENTRE FOR POLITICS</span>
+          <span class="brand-tagline" style="font-size: 0.65rem;">We Train Leaders</span>
+        </div>
+      </div>
+      <button class="mobile-drawer-close" aria-label="Close Navigation Menu"><i class="fas fa-times"></i></button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="courses.html" class="mobile-nav-link active">Our Courses</a>
+      <a href="careers.html" class="mobile-nav-link">Political Careers</a>
+      <a href="vision.html" class="mobile-nav-link">Our Vision</a>
+      <a href="founder.html" class="mobile-nav-link">Founder</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </nav>
+  </aside>
+
+  <!-- Page Header -->
+  <header class="section-py-sm bg-dark-1" style="border-bottom: 1px solid var(--ice-border);">
+    <div class="container">
+      <span class="section-tag"><i class="fas fa-book"></i> Comprehensive Course Directory</span>
+      <h1 style="font-size: clamp(2.4rem, 4vw, 3.4rem); margin-bottom: 14px;">Our Four <span class="gradient-text">Flagship Programmes</span></h1>
+      <p style="color: var(--ice-muted); font-size: 1.15rem; max-width: 800px;">
+        Dedicated learning pathways tailored for aspiring leaders, candidates, party professionals, and geopolitical strategists.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-py">
+      <div class="container">
+        <!-- Interactive Filter Controls -->
+        <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 48px; flex-wrap: wrap;">
+          <button class="btn btn-outline btn-sm course-filter-btn active" data-filter="all" style="border-radius: 9999px;">All Programmes</button>
+          <button class="btn btn-outline btn-sm course-filter-btn" data-filter="online" style="border-radius: 9999px;">Online (₹500)</button>
+          <button class="btn btn-outline btn-sm course-filter-btn" data-filter="residential" style="border-radius: 9999px;">Residential Bootcamp (₹15,000)</button>
+          <button class="btn btn-outline btn-sm course-filter-btn" data-filter="mentorship" style="border-radius: 9999px;">Personal Mentorship (₹1,00,000)</button>
+          <button class="btn btn-outline btn-sm course-filter-btn" data-filter="advanced" style="border-radius: 9999px;">Advanced Geopolitics (₹5,00,000)</button>
+        </div>
+
+        <!-- Course Cards List -->
+        <div class="courses-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          
+          <!-- COURSE 1 -->
+          <article class="course-card course-filterable-item" data-category="online">
+            <span class="course-card-badge">Course 01</span>
+            <div class="course-card-header">
+              <div class="course-number">Online Certification</div>
+              <h2 class="course-title" style="font-size: 1.35rem;">Introduction to Politics & Leadership</h2>
+              <div class="course-meta">
+                <span class="course-meta-item"><i class="fas fa-clock aurora-text"></i> 2 Hours</span>
+                <span class="course-meta-item"><i class="fas fa-laptop aurora-text"></i> Online Mode</span>
+              </div>
+            </div>
+            <div class="course-card-body">
+              <p class="course-desc">
+                An introductory programme designed for students, young professionals, aspiring politicians and individuals interested in understanding politics as a professional field.
+              </p>
+              <ul class="course-highlights-list">
+                <li><i class="fas fa-check-circle"></i> Understanding Indian Politics and Democracy</li>
+                <li><i class="fas fa-check-circle"></i> Political Leadership Fundamentals</li>
+                <li><i class="fas fa-check-circle"></i> Constitution and Democratic Institutions</li>
+                <li><i class="fas fa-check-circle"></i> Political Career Opportunities</li>
+                <li><i class="fas fa-check-circle"></i> Public Speaking & Communication</li>
+                <li><i class="fas fa-check-circle"></i> Role of Youth in Indian Politics</li>
+              </ul>
+              <div style="margin-top: 14px; padding: 12px; background: var(--bg-dark-1); border-radius: 6px; font-size: 0.82rem; color: var(--ice-muted);">
+                <strong>Target Audience:</strong> Students, young professionals, aspiring political leaders.
+              </div>
+            </div>
+            <div class="course-card-footer">
+              <div class="course-fee-row">
+                <span class="course-fee-label">Course Fee</span>
+                <span class="course-fee-amount">₹500</span>
+              </div>
+              <div class="course-btn-group">
+                <a href="course-intro-politics.html" class="btn btn-outline btn-sm">Read Syllabus</a>
+                <a href="apply.html?course=1" class="btn btn-primary btn-sm"><i class="fas fa-bolt"></i> Enroll Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 2 -->
+          <article class="course-card featured course-filterable-item" data-category="residential">
+            <span class="course-card-badge" style="background: var(--brand-saffron); color: #fff;">Course 02</span>
+            <div class="course-card-header">
+              <div class="course-number" style="color: var(--brand-saffron);">Residential Intensive</div>
+              <h2 class="course-title" style="font-size: 1.35rem;">Political Leadership & Election Management</h2>
+              <div class="course-meta">
+                <span class="course-meta-item"><i class="fas fa-calendar-alt aurora-text"></i> 3 Days</span>
+                <span class="course-meta-item"><i class="fas fa-building aurora-text"></i> Residential</span>
+              </div>
+            </div>
+            <div class="course-card-body">
+              <p class="course-desc">
+                An intensive residential programme combining theoretical knowledge with practical exercises, strategic discussions and war-room campaign simulations.
+              </p>
+              <ul class="course-highlights-list">
+                <li><i class="fas fa-check-circle"></i> Leadership & Organisation Building</li>
+                <li><i class="fas fa-check-circle"></i> Election Campaign Planning & Strategy</li>
+                <li><i class="fas fa-check-circle"></i> Constituency & Booth-Level Management</li>
+                <li><i class="fas fa-check-circle"></i> Voter Behaviour & Sentiment Tracking</li>
+                <li><i class="fas fa-check-circle"></i> Social Media & Digital Campaigning</li>
+                <li><i class="fas fa-check-circle"></i> Ground-Level Political Mobilisation</li>
+              </ul>
+              <div style="margin-top: 14px; padding: 12px; background: var(--bg-dark-1); border-radius: 6px; font-size: 0.82rem; color: var(--ice-muted);">
+                <strong>Format:</strong> Expert-led sessions, workshops, group discussions, case studies.
+              </div>
+            </div>
+            <div class="course-card-footer">
+              <div class="course-fee-row">
+                <span class="course-fee-label">Course Fee</span>
+                <span class="course-fee-amount">₹15,000</span>
+              </div>
+              <div class="course-btn-group">
+                <a href="course-election-management.html" class="btn btn-outline btn-sm">Read Syllabus</a>
+                <a href="apply.html?course=2" class="btn btn-primary btn-sm"><i class="fas fa-bolt"></i> Enroll Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 3 -->
+          <article class="course-card course-filterable-item" data-category="mentorship">
+            <span class="course-card-badge">Course 03</span>
+            <div class="course-card-header">
+              <div class="course-number">Personalised Guidance</div>
+              <h2 class="course-title" style="font-size: 1.35rem;">Personal Political Mentorship</h2>
+              <div class="course-meta">
+                <span class="course-meta-item"><i class="fas fa-user-tie aurora-text"></i> 1-on-1 Mentorship</span>
+                <span class="course-meta-item"><i class="fas fa-compass aurora-text"></i> Bespoke Format</span>
+              </div>
+            </div>
+            <div class="course-card-body">
+              <p class="course-desc">
+                A specialised mentorship programme for individuals who are serious about building an enduring personal political roadmap and senior leadership positioning.
+              </p>
+              <ul class="course-highlights-list">
+                <li><i class="fas fa-check-circle"></i> Personal Political Career Planning</li>
+                <li><i class="fas fa-check-circle"></i> Leadership Development & Presence</li>
+                <li><i class="fas fa-check-circle"></i> Political Networking & Relationships</li>
+                <li><i class="fas fa-check-circle"></i> Public Image & Personal Branding</li>
+                <li><i class="fas fa-check-circle"></i> Constituency & Community Engagement</li>
+                <li><i class="fas fa-check-circle"></i> Long-Term Political Roadmap</li>
+              </ul>
+              <div style="margin-top: 14px; padding: 12px; background: var(--bg-dark-1); border-radius: 6px; font-size: 0.82rem; color: var(--ice-muted);">
+                <strong>Audience:</strong> Aspiring candidates, elected reps, entrepreneurs entering politics.
+              </div>
+            </div>
+            <div class="course-card-footer">
+              <div class="course-fee-row">
+                <span class="course-fee-label">Programme Fee</span>
+                <span class="course-fee-amount">₹1,00,000</span>
+              </div>
+              <div class="course-btn-group">
+                <a href="course-political-mentorship.html" class="btn btn-outline btn-sm">View Details</a>
+                <button class="btn btn-primary btn-sm" data-enquire-course="Personal Political Mentorship (₹1,00,000)"><i class="fas fa-comments"></i> Enquire</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- COURSE 4 -->
+          <article class="course-card course-filterable-item" data-category="advanced">
+            <span class="course-card-badge">Course 04</span>
+            <div class="course-card-header">
+              <div class="course-number">Advanced Specialised</div>
+              <h2 class="course-title" style="font-size: 1.35rem;">Advanced Geopolitics & International Relations</h2>
+              <div class="course-meta">
+                <span class="course-meta-item"><i class="fas fa-globe aurora-text"></i> Advanced Level</span>
+                <span class="course-meta-item"><i class="fas fa-chess aurora-text"></i> Global Strategy</span>
+              </div>
+            </div>
+            <div class="course-card-body">
+              <p class="course-desc">
+                A deep dive into international politics, geopolitical developments, global power structures and India's strategic position in the contemporary world order.
+              </p>
+              <ul class="course-highlights-list">
+                <li><i class="fas fa-check-circle"></i> Fundamentals of Geopolitics & Power Structures</li>
+                <li><i class="fas fa-check-circle"></i> India's Foreign Policy & Neighbourhood</li>
+                <li><i class="fas fa-check-circle"></i> China, United States & Global Competition</li>
+                <li><i class="fas fa-check-circle"></i> International Security & Strategic Affairs</li>
+                <li><i class="fas fa-check-circle"></i> Global Trade & Economic Diplomacy</li>
+                <li><i class="fas fa-check-circle"></i> Geopolitical Risk Analysis</li>
+              </ul>
+              <div style="margin-top: 14px; padding: 12px; background: var(--bg-dark-1); border-radius: 6px; font-size: 0.82rem; color: var(--ice-muted);">
+                <strong>Audience:</strong> Senior political professionals, policymakers, researchers, analysts.
+              </div>
+            </div>
+            <div class="course-card-footer">
+              <div class="course-fee-row">
+                <span class="course-fee-label">Programme Fee</span>
+                <span class="course-fee-amount">₹5,00,000</span>
+              </div>
+              <div class="course-btn-group">
+                <a href="course-geopolitics.html" class="btn btn-outline btn-sm">View Details</a>
+                <button class="btn btn-primary btn-sm" data-enquire-course="Advanced Geopolitics & International Relations (₹5,00,000)"><i class="fas fa-comments"></i> Enquire</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Comparative Feature Table -->
+        <div style="margin-top: 72px;">
+          <h2 style="font-size: 1.8rem; margin-bottom: 24px; text-align: center;">Programme Comparison Matrix</h2>
+          <div style="overflow-x: auto; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--ice-border);">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+              <thead>
+                <tr style="background: var(--bg-dark-1); border-bottom: 1px solid var(--ice-border); color: #fff;">
+                  <th style="padding: 18px 24px;">Programme</th>
+                  <th style="padding: 18px 24px;">Fee</th>
+                  <th style="padding: 18px 24px;">Duration</th>
+                  <th style="padding: 18px 24px;">Format</th>
+                  <th style="padding: 18px 24px;">Key Deliverable</th>
+                  <th style="padding: 18px 24px;">Action</th>
+                </tr>
+              </thead>
+              <tbody style="color: var(--ice-subtle);">
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <td style="padding: 18px 24px; font-weight: 600; color: #fff;">Introduction to Politics & Leadership</td>
+                  <td style="padding: 18px 24px; color: var(--aurora-green); font-weight: 700;">₹500</td>
+                  <td style="padding: 18px 24px;">2 Hours</td>
+                  <td style="padding: 18px 24px;">Online Interactive</td>
+                  <td style="padding: 18px 24px;">Foundational career roadmap & certificate</td>
+                  <td style="padding: 18px 24px;"><a href="course-intro-politics.html" class="btn btn-outline btn-sm">Explore</a></td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <td style="padding: 18px 24px; font-weight: 600; color: #fff;">Political Leadership & Election Management</td>
+                  <td style="padding: 18px 24px; color: var(--brand-saffron); font-weight: 700;">₹15,000</td>
+                  <td style="padding: 18px 24px;">3 Days</td>
+                  <td style="padding: 18px 24px;">Residential Bootcamp</td>
+                  <td style="padding: 18px 24px;">War-room blueprint & booth management toolkit</td>
+                  <td style="padding: 18px 24px;"><a href="course-election-management.html" class="btn btn-outline btn-sm">Explore</a></td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <td style="padding: 18px 24px; font-weight: 600; color: #fff;">Personal Political Mentorship</td>
+                  <td style="padding: 18px 24px; color: var(--aurora-green); font-weight: 700;">₹1,00,000</td>
+                  <td style="padding: 18px 24px;">Customized</td>
+                  <td style="padding: 18px 24px;">1-on-1 Executive Mentorship</td>
+                  <td style="padding: 18px 24px;">Bespoke leadership branding & strategic advisory</td>
+                  <td style="padding: 18px 24px;"><a href="course-political-mentorship.html" class="btn btn-outline btn-sm">Explore</a></td>
+                </tr>
+                <tr>
+                  <td style="padding: 18px 24px; font-weight: 600; color: #fff;">Advanced Geopolitics & International Relations</td>
+                  <td style="padding: 18px 24px; color: #38bdf8; font-weight: 700;">₹5,00,000</td>
+                  <td style="padding: 18px 24px;">Executive Modular</td>
+                  <td style="padding: 18px 24px;">Advanced Specialised</td>
+                  <td style="padding: 18px 24px;">Strategic foreign policy & risk advisory capability</td>
+                  <td style="padding: 18px 24px;"><a href="course-geopolitics.html" class="btn btn-outline btn-sm">Explore</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 The Centre for Politics (TCP). Tagline: <em>We Train Leaders</em>.</div>
+        <div class="footer-bottom-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About TCP</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
