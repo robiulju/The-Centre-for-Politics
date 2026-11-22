@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
   initForms();
   initCourseFilters();
+  initCursorGlow();
+  initCardSpotlight();
+  initScrollReveal();
+  initAnimatedCounters();
+  initHeroTilt();
 });
 
 /* -------------------------------------------------------------
@@ -326,3 +331,166 @@ function downloadBrochure(courseName = 'The Centre for Politics Prospectus') {
   alert(`Preparing download: "${courseName}".\nThe official prospectus PDF will be downloaded.`);
 }
 window.downloadBrochure = downloadBrochure;
+
+/* -------------------------------------------------------------
+ * 9. Modern Interactive Animations Engine
+ * ------------------------------------------------------------- */
+
+/**
+ * Ambient Cursor Glow (Desktop)
+ */
+function initCursorGlow() {
+  if (window.matchMedia('(pointer: coarse)').matches) return; // Skip touch devices
+
+  let glow = document.querySelector('.cursor-glow');
+  if (!glow) {
+    glow = document.createElement('div');
+    glow.className = 'cursor-glow';
+    document.body.appendChild(glow);
+  }
+
+  let mouseX = -1000;
+  let mouseY = -1000;
+  let currentX = -1000;
+  let currentY = -1000;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (!glow.classList.contains('active')) {
+      glow.classList.add('active');
+    }
+  });
+
+  window.addEventListener('mouseleave', () => {
+    glow.classList.remove('active');
+  });
+
+  function renderGlow() {
+    currentX += (mouseX - currentX) * 0.15;
+    currentY += (mouseY - currentY) * 0.15;
+    glow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+    requestAnimationFrame(renderGlow);
+  }
+  requestAnimationFrame(renderGlow);
+}
+
+/**
+ * Card Spotlight Effect (Mouse Follow Radial Glow)
+ */
+function initCardSpotlight() {
+  const cards = document.querySelectorAll('.card-spotlight, .tcp-card, .course-card, .feature-box, .domain-card, .career-path-card');
+  if (!cards.length) return;
+
+  cards.forEach(card => {
+    if (!card.classList.contains('card-spotlight')) {
+      card.classList.add('card-spotlight');
+    }
+
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+}
+
+/**
+ * Viewport Scroll Reveal System
+ */
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll('.reveal');
+  if (!revealElements.length) return;
+
+  // Options for intersection observer
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -60px 0px',
+    threshold: 0.12
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        obs.unobserve(entry.target); // Reveal once
+      }
+    });
+  }, observerOptions);
+
+  revealElements.forEach(el => observer.observe(el));
+}
+
+/**
+ * Animated Stat Counters
+ */
+function initAnimatedCounters() {
+  const counters = document.querySelectorAll('[data-counter]');
+  if (!counters.length) return;
+
+  const counterObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const targetValue = parseInt(el.getAttribute('data-counter'), 10) || 0;
+        const duration = parseInt(el.getAttribute('data-duration'), 10) || 1600;
+        animateNumber(el, 0, targetValue, duration);
+        obs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  counters.forEach(counter => counterObserver.observe(counter));
+}
+
+function animateNumber(element, start, end, duration) {
+  let startTime = null;
+  function step(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = Math.min((timestamp - startTime) / duration, 1);
+    // Ease Out Cubic function
+    const easeOut = 1 - Math.pow(1 - progress, 3);
+    const currentValue = Math.floor(easeOut * (end - start) + start);
+    element.textContent = currentValue;
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    } else {
+      element.textContent = end;
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+/**
+ * 3D Hero Media Tilt (Desktop)
+ */
+function initHeroTilt() {
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  const card = document.querySelector('.hero-image-card');
+  if (!card) return;
+
+  const container = card.closest('.hero-media-wrapper') || card;
+
+  container.addEventListener('mousemove', (e) => {
+    const rect = container.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    const rotX = -(y / (rect.height / 2)) * 6; // Max 6 deg
+    const rotY = (x / (rect.width / 2)) * 6;
+
+    card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.02, 1.02, 1.02)`;
+  });
+
+  container.addEventListener('mouseleave', () => {
+    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    card.style.transition = 'transform 0.5s ease';
+  });
+
+  container.addEventListener('mouseenter', () => {
+    card.style.transition = 'none';
+  });
+}
+
